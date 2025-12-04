@@ -17,7 +17,7 @@ local types = require(script.Parent.types)
 	@tag Method
 	@tag Mutating
 	Optimized SLERP from identity quaternion to `to`. Stores the result in `out`.  
-	`out` can be the same quaternion as `from` or `to`.
+	`out` can be the same quaternion as `to`.
 ]=]
 return function(out: types.Quaternion, to: types.Quaternion, t: number): types.Quaternion
 	local tx, ty, tz, tw = getComponents(to)

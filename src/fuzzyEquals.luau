@@ -10,6 +10,7 @@ local types = require(script.Parent.types)
 	@param q2 Quaternion
 	@param epsilon number -- Allowed rotational error.
 	@return boolean
+	@tag Method
 	Checks approximate rotational equality within epsilon using the quaternion dot product.
 ]=]
 return function(q1: types.Quaternion, q2: types.Quaternion, epsilon: number): boolean

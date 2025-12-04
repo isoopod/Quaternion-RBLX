@@ -1,0 +1,6 @@
+apiCategories = ["Constructor", "Decomposition", "Method", "Property"]
+
+gitSourceBranch = "main"
+
+[home]
+enabled = true

@@ -1,9 +1,11 @@
 # Project place file
-/Quaternion-RBLX.rbxlx
+*.rbxl*
+*.rbxm*
 
 # Roblox Studio lock files
 /*.rbxlx.lock
 /*.rbxl.lock
+
 
 # Pesde packages
 *_packages

@@ -16,8 +16,13 @@ local types = require(script.Parent.types)
 	Multiplies the left-hand side quaternion by the right-hand side quaternion.
 
 	:::note
-	Quaternion multiplication is not commutative; the order of multiplication matters.  
-	Think of it as rotating the lhs quaternion by the rhs quaternion.
+	Quaternion multiplication is not commutative; the order of multiplication matters.
+
+	When you multiply two quaternions, you are applying one rotation after another.  
+	The right-hand side quaternion (`rhs`) is applied first, and the left-hand side quaternion (`lhs`) is applied **after that**.  
+	In other words, `lhs * rhs` is taking `rhs` and rotating it by `lhs`.
+
+	This is the same as `CFrameA` * `CFrameB`; B is applied first and then transformed by A.
 	:::
 ]=]
 return function(lhs: types.Quaternion, rhs: types.Quaternion): types.Quaternion
