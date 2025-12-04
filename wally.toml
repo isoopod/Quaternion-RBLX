@@ -1,7 +1,12 @@
 [package]
 name = "isoopod/quaternion-rblx"
+description = "Roblox library for working with rotations in quaternions instead of CFrames"
 version = "0.1.0"
 registry = "https://github.com/UpliftGames/wally-index"
 realm = "shared"
+repository = "https://github.com/isoopod/Quaternion-RBLX"
+
+exclude = ["**"]
+include = ["src", "src/*", "default.project.json", "wally.toml", "LICENSE"]
 
 [dependencies]

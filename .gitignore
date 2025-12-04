@@ -5,4 +5,8 @@
 /*.rbxlx.lock
 /*.rbxl.lock
 
+# Pesde packages
+*_packages
+.pesde
+
 sourcemap.json
