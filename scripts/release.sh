@@ -23,7 +23,7 @@ git push
 
 # Publish
 wally publish
-pesde publish
+pesde publish -y
 
 rojo build -o build.rbxm
 
