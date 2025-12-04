@@ -4,6 +4,7 @@ export type Quaternion = types.Quaternion
 
 return table.freeze({
 	angle = require(script.angle),
+	applyRotation = require(script.applyRotation),
 	dot = require(script.dot),
 	equals = require(script.equals),
 	fromAxisAngles = require(script.fromAxisAngles),
