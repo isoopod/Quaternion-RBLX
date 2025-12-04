@@ -1,5 +1,5 @@
 name = "isoopod/quaternion_rblx"
-version = "0.0.0"
+version = "0.1.0"
 description = "Roblox library for working with rotations in quaternions instead of CFrames"
 authors = ["isoopod"]
 repository = "https://github.com/isoopod/Quaternion-RBLX"
