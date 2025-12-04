@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocs=self.webpackChunkdocs||[]).push([[458],{4410:o=>{o.exports=JSON.parse('{"sourceUrl":"https://github.com/isoopod/Quaternion-RBLX/blob/main","baseUrl":"/Quaternion-RBLX/","classOrder":[],"apiCategories":["Constructor","Decomposition","Method","Property"]}')}}]);
