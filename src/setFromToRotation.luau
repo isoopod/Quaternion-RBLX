@@ -7,15 +7,15 @@ local types = require(script.Parent.types)
 local X_AXIS, Y_AXIS = vector.create(1, 0, 0), vector.create(0, 1, 0)
 
 --[=[
-    @function setFromToRotation
-    @within Quaternion
-    @param q Quaternion -- The quaternion to set.
-    @param from Vector3 -- The starting direction vector.
-    @param to Vector3 -- The target direction vector.
-    @return Quaternion -- `q`
+	@function setFromToRotation
+	@within Quaternion
+	@param q Quaternion -- The quaternion to set.
+	@param from Vector3 -- The starting direction vector.
+	@param to Vector3 -- The target direction vector.
+	@return Quaternion -- `q`
 	@tag Method
-    @tag Mutating
-    Sets an existing quaternion so that it represents the rotation from one direction vector to another.
+	@tag Mutating
+	Sets an existing quaternion so that it represents the rotation from one direction vector to another.
 ]=]
 local function setFromToRotation(q: types.Quaternion, from: vector, to: vector): types.Quaternion
 	local fromNorm = vector.normalize(from)

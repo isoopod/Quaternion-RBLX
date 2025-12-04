@@ -3,11 +3,11 @@
 local types = require(script.Parent.types)
 
 --[=[
-    @function identity
-    @within Quaternion
-    @return Quaternion -- The identity quaternion (0, 0, 0, 1).
+	@function identity
+	@within Quaternion
+	@return Quaternion -- The identity quaternion (0, 0, 0, 1).
 	@tag Constructor
-    Creates and returns the identity quaternion.
+	Creates and returns the identity quaternion.
 ]=]
 return function(): types.Quaternion
 	local q = buffer.create(16) :: types.Quaternion

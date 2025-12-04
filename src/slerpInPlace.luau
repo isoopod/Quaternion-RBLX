@@ -8,17 +8,17 @@ local set = require(script.Parent.set)
 local types = require(script.Parent.types)
 
 --[=[
-    @function slerpInPlace
-    @within Quaternion
-    @param out Quaternion -- The quaternion to store the result.
-    @param from Quaternion -- The starting quaternion.
-    @param to Quaternion -- The target quaternion.
-    @param t number -- The interpolation factor (0 to 1).
-    @return Quaternion -- `out`
-    @tag Method
-    @tag Mutating
-    Spherically interpolates between two quaternions and stores the result in `out`.  
-    `out` can be the same quaternion as `from` or `to`.
+	@function slerpInPlace
+	@within Quaternion
+	@param out Quaternion -- The quaternion to store the result.
+	@param from Quaternion -- The starting quaternion.
+	@param to Quaternion -- The target quaternion.
+	@param t number -- The interpolation factor (0 to 1).
+	@return Quaternion -- `out`
+	@tag Method
+	@tag Mutating
+	Spherically interpolates between two quaternions and stores the result in `out`.  
+	`out` can be the same quaternion as `from` or `to`.
 ]=]
 return function(out: types.Quaternion, from: types.Quaternion, to: types.Quaternion, t: number): types.Quaternion
 	local d = dot(from, to)

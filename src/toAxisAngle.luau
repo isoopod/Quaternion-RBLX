@@ -5,12 +5,12 @@ local getComponents = require(script.Parent.getComponents)
 local types = require(script.Parent.types)
 
 --[=[
-    @function toAxisAngle
-    @within Quaternion
-    @param q Quaternion -- The quaternion.
-    @return Vector3, number -- The axis of rotation as a Vector3 and the angle in radians.
+	@function toAxisAngle
+	@within Quaternion
+	@param q Quaternion -- The quaternion.
+	@return Vector3, number -- The axis of rotation as a Vector3 and the angle in radians.
 	@tag Decomposition
-    Converts the quaternion to an axis-angle representation.
+	Converts the quaternion to an axis-angle representation.
 ]=]
 return function(q: types.Quaternion): (Vector3 & vector, number)
 	local x, y, z, w = getComponents(q)

@@ -4,12 +4,12 @@ local getComponents = require(script.Parent.getComponents)
 local types = require(script.Parent.types)
 
 --[=[
-    @function toEulerAngles
-    @within Quaternion
-    @param q Quaternion -- The quaternion.
-    @return number, number, number -- The Euler angles (pitch, yaw, roll) in radians.
+	@function toEulerAngles
+	@within Quaternion
+	@param q Quaternion -- The quaternion.
+	@return number, number, number -- The Euler angles (pitch, yaw, roll) in radians.
 	@tag Decomposition
-    Converts the quaternion to Euler angles (XYZ order) in radians.
+	Converts the quaternion to Euler angles (XYZ order) in radians.
 ]=]
 return function(q: types.Quaternion): (number, number, number)
 	local x, y, z, w = getComponents(q)

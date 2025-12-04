@@ -5,12 +5,12 @@ local getComponents = require(script.Parent.getComponents)
 local types = require(script.Parent.types)
 
 --[=[
-    @function yVector
-    @within Quaternion
-    @param q Quaternion -- The quaternion.
-    @return Vector3 -- The up direction vector of the quaternion.
+	@function yVector
+	@within Quaternion
+	@param q Quaternion -- The quaternion.
+	@return Vector3 -- The up direction vector of the quaternion.
 	@tag Property
-    Gets the up direction vector of the quaternion.
+	Gets the up direction vector of the quaternion.
 ]=]
 return function(q: types.Quaternion): Vector3 & vector
 	local x, y, z, w = getComponents(q)

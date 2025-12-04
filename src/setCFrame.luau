@@ -5,14 +5,14 @@ local set = require(script.Parent.set)
 local types = require(script.Parent.types)
 
 --[=[
-    @function setCFrame
-    @within Quaternion
-    @param q Quaternion -- The quaternion to set to the CFrame's rotation.
+	@function setCFrame
+	@within Quaternion
+	@param q Quaternion -- The quaternion to set to the CFrame's rotation.
 	@param cf CFrame -- The CFrame to convert.
-    @return Quaternion -- `q`
+	@return Quaternion -- `q`
 	@tag Method
 	@tag Mutating
-    Creates a quaternion from a CFrame's rotation.
+	Creates a quaternion from a CFrame's rotation.
 ]=]
 return function(q: types.Quaternion, cf: CFrame): types.Quaternion
 	local _, _, _, m00, m01, m02, m10, m11, m12, m20, m21, m22 = cf:GetComponents()

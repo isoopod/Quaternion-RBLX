@@ -5,15 +5,15 @@ local set = require(script.Parent.set)
 local types = require(script.Parent.types)
 
 --[=[
-    @function setLookRotation
-    @within Quaternion
-    @param q Quaternion -- The quaternion to set.
-    @param forward Vector3 -- The forward direction vector.
-    @param up Vector3 -- The up direction vector.
+	@function setLookRotation
+	@within Quaternion
+	@param q Quaternion -- The quaternion to set.
+	@param forward Vector3 -- The forward direction vector.
+	@param up Vector3 -- The up direction vector.
 	@return Quaternion -- `q`
 	@tag Method
-    @tag Mutating
-    Sets an existing quaternion so that it represents a rotation looking in a specified forward direction with a given up direction.
+	@tag Mutating
+	Sets an existing quaternion so that it represents a rotation looking in a specified forward direction with a given up direction.
 ]=]
 local function setLookRotation(q: types.Quaternion, forward: vector, up: vector): types.Quaternion
 	local f = vector.normalize(forward)

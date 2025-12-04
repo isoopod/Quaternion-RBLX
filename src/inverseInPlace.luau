@@ -6,13 +6,13 @@ local set = require(script.Parent.set)
 local types = require(script.Parent.types)
 
 --[=[
-    @function inverseInPlace
-    @within Quaternion
-    @param q Quaternion -- The quaternion to invert.
+	@function inverseInPlace
+	@within Quaternion
+	@param q Quaternion -- The quaternion to invert.
 	@return Quaternion -- `q`
 	@tag Method
-    @tag Mutating
-    Inverts the quaternion in place.
+	@tag Mutating
+	Inverts the quaternion in place.
 ]=]
 return function(q: types.Quaternion): types.Quaternion
 	local x, y, z, w = getComponents(q)

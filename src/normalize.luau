@@ -7,13 +7,13 @@ local new = require(script.Parent.new)
 local types = require(script.Parent.types)
 
 --[=[
-    @function normalize
-    @within Quaternion
-    @param q Quaternion -- The quaternion.
-    @return Quaternion -- The normalized quaternion.
+	@function normalize
+	@within Quaternion
+	@param q Quaternion -- The quaternion.
+	@return Quaternion -- The normalized quaternion.
 	@tag Method
-    @tag Pure
-    Returns a normalized version of the quaternion.
+	@tag Pure
+	Returns a normalized version of the quaternion.
 ]=]
 return function(q: types.Quaternion): types.Quaternion
 	local x, y, z, w = getComponents(q)

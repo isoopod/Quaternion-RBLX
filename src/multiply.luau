@@ -6,19 +6,19 @@ local new = require(script.Parent.new)
 local types = require(script.Parent.types)
 
 --[=[
-    @function multiply
-    @within Quaternion
-    @param lhs Quaternion -- The left-hand side quaternion.
-    @param rhs Quaternion -- The right-hand side quaternion.
-    @return Quaternion -- The resulting quaternion from the multiplication.
+	@function multiply
+	@within Quaternion
+	@param lhs Quaternion -- The left-hand side quaternion.
+	@param rhs Quaternion -- The right-hand side quaternion.
+	@return Quaternion -- The resulting quaternion from the multiplication.
 	@tag Method
-    @tag Pure
-    Multiplies the left-hand side quaternion by the right-hand side quaternion.
+	@tag Pure
+	Multiplies the left-hand side quaternion by the right-hand side quaternion.
 
-    :::note
-    Quaternion multiplication is not commutative; the order of multiplication matters.  
-    Think of it as rotating the lhs quaternion by the rhs quaternion.
-    :::
+	:::note
+	Quaternion multiplication is not commutative; the order of multiplication matters.  
+	Think of it as rotating the lhs quaternion by the rhs quaternion.
+	:::
 ]=]
 return function(lhs: types.Quaternion, rhs: types.Quaternion): types.Quaternion
 	local x1, y1, z1, w1 = getComponents(lhs)

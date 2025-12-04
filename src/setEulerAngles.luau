@@ -4,16 +4,16 @@ local set = require(script.Parent.set)
 local types = require(script.Parent.types)
 
 --[=[
-    @function setEulerAngles
-    @within Quaternion
-    @param q Quaternion -- The quaternion to set.
-    @param x number -- The rotation around the x-axis in radians (pitch).
-    @param y number -- The rotation around the y-axis in radians (yaw).
-    @param z number -- The rotation around the z-axis in radians (roll).
-    @return Quaternion -- `q`
+	@function setEulerAngles
+	@within Quaternion
+	@param q Quaternion -- The quaternion to set.
+	@param x number -- The rotation around the x-axis in radians (pitch).
+	@param y number -- The rotation around the y-axis in radians (yaw).
+	@param z number -- The rotation around the z-axis in radians (roll).
+	@return Quaternion -- `q`
 	@tag Method
-    @tag Mutating
-    Sets an existing quaternion from Euler angles XYZ in radians.
+	@tag Mutating
+	Sets an existing quaternion from Euler angles XYZ in radians.
 ]=]
 return function(q: types.Quaternion, pitch: number, yaw: number, roll: number): types.Quaternion
 	local cy = math.cos(yaw * 0.5)

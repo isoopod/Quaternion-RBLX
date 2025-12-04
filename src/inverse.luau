@@ -7,13 +7,13 @@ local new = require(script.Parent.new)
 local types = require(script.Parent.types)
 
 --[=[
-    @function inverse
-    @within Quaternion
-    @param q Quaternion -- The quaternion.
-    @return Quaternion -- The inverse of the quaternion.
+	@function inverse
+	@within Quaternion
+	@param q Quaternion -- The quaternion.
+	@return Quaternion -- The inverse of the quaternion.
 	@tag Method
-    @tag Pure
-    Returns the inverse of the quaternion.
+	@tag Pure
+	Returns the inverse of the quaternion.
 ]=]
 return function(q: types.Quaternion): types.Quaternion
 	local x, y, z, w = getComponents(q)
