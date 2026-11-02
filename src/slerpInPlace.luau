@@ -2,7 +2,6 @@
 --!native
 
 local dot = require(script.Parent.dot)
-local inverseUnitInPlace = require(script.Parent.inverseUnitInPlace)
 local nlerpInPlace = require(script.Parent.nlerpInPlace)
 local set = require(script.Parent.set)
 local types = require(script.Parent.types)
@@ -23,9 +22,10 @@ local types = require(script.Parent.types)
 return function(out: types.Quaternion, from: types.Quaternion, to: types.Quaternion, t: number): types.Quaternion
 	local d = dot(from, to)
 
+	local sign = 1
 	if d < 0 then
-		inverseUnitInPlace(to)
 		d = -d
+		sign = -1
 	end
 	local theta = math.acos(math.clamp(d, -1, 1))
 	local sinTheta = math.sin(theta)
@@ -34,7 +34,7 @@ return function(out: types.Quaternion, from: types.Quaternion, to: types.Quatern
 		return nlerpInPlace(out, from, to, t)
 	else
 		local ratioA = math.sin((1 - t) * theta) / sinTheta
-		local ratioB = math.sin(t * theta) / sinTheta
+		local ratioB = (math.sin(t * theta) / sinTheta) * sign
 
 		local x = ratioA * buffer.readf32(from, 0) + ratioB * buffer.readf32(to, 0)
 		local y = ratioA * buffer.readf32(from, 4) + ratioB * buffer.readf32(to, 4)
